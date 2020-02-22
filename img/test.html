@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+
+
+    <button onclick="postToIndexedDB()">POST</button>
+    <button onclick="postFromIndexedDB()">GET</button>
+    <script> //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+let db = null;
+
+const request = indexedDB.open("myAwesomeDataBase");  // (dbName, dbVersion)
+
+// on upgrade needed
+request.onupgradeneeded = e => {
+    db = e.target.result;
+
+    const indexedDBfeedback = db.createObjectStore("feedback", {keyPath: "id"});
+    const indexedDBnews = db.createObjectStore("news", {keyPath: "id"});
+
+    alert('Upgrading...');
+}
+
+// on success      
+request.onsuccess = e => {
+    alert('Success!');
+    db = request.result;        // /////////////////////// mb
+}
+
+// on error
+request.onerror = e => {
+    alert('Error, Fucc you!');
+}
+
+function postToIndexedDB() {
+    let transaction = db.transaction("feedback", "readwrite");
+    let feedback = transaction.objectStore("feedback");
+
+    let feedData = {
+        id: `id${Math.random()}`,
+        name: `name`,
+        subject: `subject`,
+        message: `message`,
+      };
+
+    feedback.add(feedData);
+}
+
+function postFromIndexedDB () {
+
+    let transaction = db.transaction("feedback", "readonly");
+    let feedback = transaction.objectStore("feedback");
+    const request = feedback.openCursor();
+    request.onsuccess = e => {
+        const cursor = e.target.result;
+
+        if(cursor) {
+            // do smt
+
+            alert(cursor.key + cursor.value.name + cursor.value.email + cursor.value.subject + cursor.value.message);
+
+            cursor.continue();
+        }
+    }
+}
+
+
+    </script> 
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang = 'uk'>
+<head>
+    <meta charset= "1251">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/navi.ico" type="image/x-icon">
+    <title>NaVi</title>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="wrapper">
+
+    <header>
+        <div class="logoHeader">
+            <a href="index.html">
+                <div class="blockLogo">
+                    <div class="logoRed"></div>
+                    <div class="logoGreen"></div>
+                    <div class="logoBlue"></div>
+                </div>
+            </a>
+        </div>
+        <nav>
+            <nav class="mobile_nav" onclick="openMenu()">
+                <div class="burger_button"><span></span></div>
+            </nav>
+
+            <ul>
+                <a href="news.html">
+                    <li class="topNav_li">
+                        <div class="item_header news_header">
+                            <span>Новини</span>
+                        </div>
+                    </li>
+                </a>
+                <li class="topNav_li"><div class="item_header media_header"><span>Медіа</span></div>
+                    <ul class="hidden_ul">
+                        <a href="streams.html"><li class="hidden_li">Стріми</li></a>
+                        <a href="videos.html"><li class="hidden_li">Відео</li></a>
+                        <a href="photoes.html"><li class="hidden_li">Фото</li></a>
+                    </ul>
+                </li>
+                <li class="topNav_li"><div class="item_header events_header"><span>Події</span></div>
+                    <ul class="hidden_ul">
+                        <a href="mathes.html"><li class="hidden_li">Матчі</li></a>
+                        <a href="reports.html"><li class="hidden_li">Репортажі</li></a>
+                        <a href="tournaments.html"><li class="hidden_li">Турніри</li></a>
+                    </ul>
+                </li>
+                <a href="shop.html"><li class="topNav_li"><div class="item_header shop_header"><span>Магазин</span></div></li></a>
+                <li class="topNav_li"><div class="item_header team_header"><span>Команда</span></div>
+                    <ul class="hidden_ul">
+                        <a href="players.html"><li class="hidden_li">Гравці</li></a>
+                        <a href="records.html"><li class="hidden_li">Досягнення</li></a>
+                        <a href="hall_of_fame.html"><li class="hidden_li">Зала слави</li></a>
+                    </ul>
+                </li>
+                <li class="topNav_li"><div class="item_header club_header"><span>Клуб</span></div>
+                
+                    <ul class="hidden_ul">
+                        <li class="hidden_li">Партнери</li>
+                        <li class="hidden_li">Історія</li>
+                        <li class="hidden_li">Персонал</li>
+                        <li class="hidden_li">Прес-Кіт</li>
+                        <li class="hidden_li">Контакти</li>
+                    </ul>
+                </li>
+                <a href="fan.html"><li class="topNav_li"><div class="item_header fanZone_header"><span>Фан-зона</span></div></li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+            
+    </div>
+
+    <footer>
+        <div class="top_footer">
+            <img src="img/footer-logo.png" alt="footer logo">
+        </div>
+
+        <div class="bottom_footer">
+
+            <div class="bottom_footer1">
+                <span>Natus Vincere 2009-2020 © Запрещено для детей. 18+</span>
+            </div>
+
+            <div class="bottom_footer2">
+                Все авторские права и торговые марки принадлежат соответствующим владельцам.
+            </div>
+
+            <div class="bottom_footer3"></div>
+        </div>
+    </footer>
+
+    <div class="blockTextLogo">Natus Vincere</div>
+
+    
+    <div class="mobile-menu" id="mobile_nav_menu">
+        <a href="news.html"><div class="mobile-li">Новини</div></a>
+        <div class="mobile-li" onclick="openMenuItem(this.nextSibling)">Медіа</div><ul class="hidden_mobile_ul">
+            <a href="streams.html"><li class="hidden_mobile_li">Стріми</li></a>
+            <a href="videos.html"><li class="hidden_mobile_li">Відео</li></a>
+            <a href="photoes.html"><li class="hidden_mobile_li">Фото</li></a>
+        </ul>
+        <div class="mobile-li" onclick="openMenuItem(this.nextSibling)">Події</div><ul class="hidden_mobile_ul">
+            <a href="mathes.html"><li class="hidden_mobile_li">Матчі</li></a>
+            <a href="reports.html"><li class="hidden_mobile_li">Репортажі</li></a>
+            <a href="tournaments.html"><li class="hidden_mobile_li">Турніри</li></a>
+        </ul>
+        <a href="shop.html"><div class="mobile-li">Магазин</div></a>
+        <div class="mobile-li" onclick="openMenuItem(this.nextSibling)">Команда</div><ul class="hidden_mobile_ul">
+            <a href="players.html"><li class="hidden_mobile_li">Гравці</li></a>
+            <a href="records.html"><li class="hidden_mobile_li">Досягнення</li></a>
+            <a href="hall_of_fame.html"><li class="hidden_mobile_li">Зала слави</li></a>
+        </ul>
+        <div class="mobile-li" onclick="openMenuItem(this.nextSibling)">Клуб</div><ul class="hidden_mobile_ul">
+            <li class="hidden_mobile_li">Партнери</li>
+            <li class="hidden_mobile_li">Історія</li>
+            <li class="hidden_mobile_li">Персонал</li>
+            <li class="hidden_mobile_li">Прес-Кіт</li>
+            <li class="hidden_mobile_li">Контакти</li>
+        </ul>
+        <a href="fan.html"><div class="mobile-li">Фан-зона</div></a>
+
+    </div>
+    
+</div>
+
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
